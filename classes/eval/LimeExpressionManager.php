@@ -6073,10 +6073,10 @@ EOD;
                         $_SESSION['relevanceStatus'][$rowdivid] = $sqrelevant;
                     }
                 }
+                $type = $qinfo['info']['type'];
                 if ($relevant && $grelevant && $sqrelevant)
                 {
                     $value = (isset($_POST[$sq]) ? $_POST[$sq] : '');
-                    $type = $qinfo['info']['type'];
                     if ($radixchange && isset($LEM->knownVars[$sq]['onlynum']) && $LEM->knownVars[$sq]['onlynum']=='1')
                     {
                         // convert from comma back to decimal
