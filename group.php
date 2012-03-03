@@ -713,7 +713,7 @@ echo "<input type='text' id='runonce' value='0' style='display: none;'/>
     <script type='text/javascript'>
     <!--\n";
 
-echo "var LEMradix='" . $radix . "'\n";
+echo "var LEMradix='" . $radix . "';\n";
 
 print <<<END
 	function fixnum_checkconditions(value, name, type, evt_type)
@@ -799,7 +799,13 @@ foreach ($_SESSION['grouplist'] as $gl)
     }
 
     echo "\n\n<!-- START THE GROUP -->\n";
-    echo "\n\n<div id='group-$gid'>\n";
+    echo "\n\n<div id='group-$gid'";
+    $gnoshow = LimeExpressionManager::GroupIsIrrelevantOrHidden($gid);
+    if  ($gnoshow)
+    {
+        echo " style='display: none;'";
+    }
+    echo ">\n";
     echo templatereplace(file_get_contents("$thistpl/startgroup.pstpl"));
     echo "\n";
 
@@ -925,6 +931,7 @@ if (!$previewgrp){
         $stepIndex = LimeExpressionManager::GetStepIndexInfo();
         $lastGseq=-1;
         $gseq = -1;
+        $grel=true;
         for($v = 0, $n = 0; $n != $_SESSION['maxstep']; ++$n)
         {
             if (!isset($stepIndex[$n])) {
@@ -932,23 +939,28 @@ if (!$previewgrp){
             }
             $stepInfo = $stepIndex[$n];
 
-            if (!$stepInfo['show'])
-                continue;
-
             if ($surveyMode == 'question')
             {
                 if ($lastGseq != $stepInfo['gseq']) {
                     // show the group label
                     ++$gseq;
-                    $g = $_SESSION['grouplist'][$gseq];                
-                    echo '<h3>' . FlattenText($g[1]) . "</h3>";
+                    $g = $_SESSION['grouplist'][$gseq]; 
+                    $grel = !LimeExpressionManager::GroupIsIrrelevantOrHidden($stepInfo['gid']);
+                    if ($grel)
+                    {
+                        echo '<h3>' . FlattenText($g[1]) . "</h3>";
+                    }
                     $lastGseq = $stepInfo['gseq'];
                 }
+                if (!$grel || !$stepInfo['show'])
+                    continue;                   
                 $q = $_SESSION['fieldarray'][$n];
             }
             else
             {
                 ++$gseq;
+                if (!$stepInfo['show'])
+                    continue;                   
                 $g = $_SESSION['grouplist'][$gseq];
             }
 
