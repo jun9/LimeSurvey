@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: LimeSurvey French language file\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-03 09:42+0100\n"
-"PO-Revision-Date: 2012-03-03 10:19+0100\n"
+"PO-Revision-Date: 2012-03-03 12:12+0100\n"
 "Last-Translator: b00z00 <b00z00@b00z00.org>\n"
 "Language-Team: Sébastien GAUGRY <_>\n"
 "Language: \n"
@@ -2894,9 +2894,8 @@ msgid "Arc tangent of two variables"
 msgstr "Arc tangente de deux variables"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:150
-#, fuzzy
 msgid "Round fractions up"
-msgstr "Confirmation"
+msgstr "Arrondit les fractions au nombre supérieur"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:151
 msgid "Returns true(1) if it is a valid date in gregorian calendar"
@@ -2924,7 +2923,7 @@ msgstr ""
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:157
 msgid "Round fractions down"
-msgstr ""
+msgstr "Arrondit les fractions au nombre inférieur"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:158
 msgid "Format a GMT date/time"
@@ -3033,11 +3032,11 @@ msgstr "Expression exponentielle"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:184
 msgid "Convert a quoted-printable string to an 8 bit string"
-msgstr ""
+msgstr "Convertit une chaîne avec guillemets imprimables en chaîne 8 bits"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:185
 msgid "Convert a 8 bit string to a quoted-printable string"
-msgstr ""
+msgstr "Convertit une chaîne 8 bits en chaîne avec guillemets imprimables"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:186
 msgid "Quote meta characters"
@@ -3073,7 +3072,7 @@ msgstr "Racine carrée"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:194
 msgid "Calculate the Sample Standard Deviation for the list of numbers"
-msgstr ""
+msgstr "Calcule l'écart-type pour la liste de nombres"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/classes/eval/ExpressionManager.php:195
 msgid "Pad a string to a certain length with another string"
@@ -7586,9 +7585,8 @@ msgid "Do not use Google Analytics"
 msgstr "Ne pas utiliser Google Analytics"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/admin/editsurveysettings.php:862
-#, fuzzy
 msgid "Default Google Analytics"
-msgstr "Scénario par défaut"
+msgstr "Google Analytics par défaut"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/admin/editsurveysettings.php:867
 msgid "Track pages within survey"
@@ -10364,9 +10362,8 @@ msgid "Show graphs"
 msgstr "Afficher les graphiques"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/admin/statistics.php:345
-#, fuzzy
 msgid "Show text responses inline"
-msgstr "Réponses complètes uniquement"
+msgstr "Afficher des réponses texte intégrées"
 
 #: /home/b00z00/DEVELOPPEMENT/depots_git/LimeSurvey/admin/statistics.php:352
 msgid "Select output format"
